@@ -11,6 +11,7 @@ import SwiftUI
 // 1) make it use a class for DiceRoll so that you can add a list at the bototm, listing the last diceRolls
 // 2) make it look better
 // 3) think about what other things you want to implement
+// 4) add reset function (functionalitY)
 
 struct ContentView: View {
     @State private var showSettings = false
@@ -61,14 +62,27 @@ struct ContentView: View {
             }
             .navigationTitle("Rolling dice!")
             .toolbar{
-                Button("Settings"){
-                    showSettings = true
+                ToolbarItem(placement: .topBarLeading){
+                    Button("Reset"){
+                        print("Reset")
+                        reset()
+                    }
+                }
+                ToolbarItem(placement: .topBarTrailing){
+                    Button("Settings"){
+                        showSettings = true
+                    }
                 }
             }
             
 //            .background(.red)
             .padding()
         }
+    }
+    func reset() {
+        diceRolls = []
+        numSidesOfDice = 6
+        numDice = 1
     }
 }
 
