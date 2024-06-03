@@ -12,6 +12,8 @@ struct SettingsView: View {
     let diceTypes = [6, 8, 12, 20, 100]
     let numDice = [1, 2, 3, 4, 5, 6]
     @Binding var numSidesOfDice : Int
+    @Binding var selectedNumDice : Int
+
     var body: some View {
         VStack{
             Text("How do you want to roll your dice??")
@@ -31,7 +33,7 @@ struct SettingsView: View {
             .pickerStyle(.inline)
             Spacer()
             Text("How many dice?").font(.title2)
-            Picker("Select a dice", selection: $numSidesOfDice){
+            Picker("Select a dice", selection: $selectedNumDice){
                 ForEach(numDice, id:\.self){
                     Text("\($0)")
                 }
@@ -44,11 +46,12 @@ struct SettingsView: View {
 
 #Preview {
     struct Preview: View {
-           @State var number = 10
+        @State var number = 10
         @State var booleanVal = false
-           var body: some View {
-               SettingsView(isPresented: $booleanVal, numSidesOfDice: $number)
-           }
-       }
-       return Preview()
+        @State var numberDice = 2
+        var body: some View {
+            SettingsView(isPresented: $booleanVal, numSidesOfDice: $number, selectedNumDice: $numberDice)
+        }
+    }
+    return Preview()
 }
