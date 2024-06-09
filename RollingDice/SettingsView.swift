@@ -13,8 +13,15 @@ struct SettingsView: View {
     let numDice = [1, 2, 3, 4, 5, 6]
     @Binding var numSidesOfDice : Int
     @Binding var selectedNumDice : Int
+    @Environment(\.dismiss) var dismiss
 
     var body: some View {
+        HStack{
+            Spacer()
+            Button("Close"){
+                dismiss()
+            }
+        }.padding([.horizontal, .top])
         VStack{
             Text("How do you want to roll your dice??")
                 .font(.largeTitle)

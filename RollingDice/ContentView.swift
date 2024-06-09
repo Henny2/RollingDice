@@ -39,7 +39,7 @@ struct ContentView: View {
                 VStack(alignment: .center){
                     Button("Roll dice"){
 //                        var rolledNums : [Int] = []
-                        var diceRoll = DiceRoll()
+                        let diceRoll = DiceRoll()
                         for _ in 1..<numDice+1 {
                             rolledNum = Int.random(in: 1..<numSidesOfDice)
 //                            rolledNums.append(rolledNum)
