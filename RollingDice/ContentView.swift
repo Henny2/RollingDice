@@ -9,9 +9,7 @@ import SwiftUI
 
 // next steps:
 // 1) make it use a class for DiceRoll so that you can add a list at the bototm, listing the last diceRolls
-// 2) make it look better
-// 3) think about what other things you want to implement
-// 4) add reset function (functionalitY)
+// 2) think about what other things you want to implement
 
 struct ContentView: View {
     @State private var showSettings = false
