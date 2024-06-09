@@ -12,6 +12,7 @@
 		403CF77D2C0C120000C0B012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 403CF77C2C0C120000C0B012 /* Assets.xcassets */; };
 		403CF7802C0C120000C0B012 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 403CF77F2C0C120000C0B012 /* Preview Assets.xcassets */; };
 		403CF7872C0D507500C0B012 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403CF7862C0D507500C0B012 /* SettingsView.swift */; };
+		403CF7892C1550D600C0B012 /* DiceRoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403CF7882C1550D600C0B012 /* DiceRoll.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		403CF77C2C0C120000C0B012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		403CF77F2C0C120000C0B012 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		403CF7862C0D507500C0B012 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		403CF7882C1550D600C0B012 /* DiceRoll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceRoll.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				403CF7782C0C11FF00C0B012 /* RollingDiceApp.swift */,
 				403CF77A2C0C11FF00C0B012 /* ContentView.swift */,
+				403CF7882C1550D600C0B012 /* DiceRoll.swift */,
 				403CF7862C0D507500C0B012 /* SettingsView.swift */,
 				403CF77C2C0C120000C0B012 /* Assets.xcassets */,
 				403CF77E2C0C120000C0B012 /* Preview Content */,
@@ -143,6 +146,7 @@
 				403CF7872C0D507500C0B012 /* SettingsView.swift in Sources */,
 				403CF77B2C0C11FF00C0B012 /* ContentView.swift in Sources */,
 				403CF7792C0C11FF00C0B012 /* RollingDiceApp.swift in Sources */,
+				403CF7892C1550D600C0B012 /* DiceRoll.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

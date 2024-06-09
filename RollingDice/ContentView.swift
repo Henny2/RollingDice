@@ -13,7 +13,9 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showSettings = false
-    @State private var diceRolls : [[Int]] = []
+    @State private var diceRolls : [DiceRoll] = []
+//    @State private var diceRolls : [[Int]] = []
+
     let diceTypes = [6, 8, 12, 20, 100]
     @State private var rolledNum = 0
     // number of sides on the die
@@ -36,12 +38,15 @@ struct ContentView: View {
                 Spacer()
                 VStack(alignment: .center){
                     Button("Roll dice"){
-                        var rolledNums : [Int] = []
+//                        var rolledNums : [Int] = []
+                        var diceRoll = DiceRoll()
                         for _ in 1..<numDice+1 {
                             rolledNum = Int.random(in: 1..<numSidesOfDice)
-                            rolledNums.append(rolledNum)
+//                            rolledNums.append(rolledNum)
+                            diceRoll.numbers.append(rolledNum)
                         }
-                        diceRolls.append(rolledNums)
+//                        diceRolls.append(rolledNums)
+                        diceRolls.append(diceRoll)
                     }
                     .foregroundColor(.white)
                     .font(.title)
@@ -49,7 +54,11 @@ struct ContentView: View {
                     .background(.gray)
                     .clipShape(.circle)
                     .padding()
-                    Text("Rolled Nums: \(diceRolls)")
+//                    Text("Rolled Nums: \(diceRolls)")
+                    Text("Dice Rolls").font(.title3).bold()
+                    List(diceRolls){ diceRoll in
+                        Text("\(diceRoll.numbers)")
+                    }
                     
                 }
                 Spacer()
